@@ -47,4 +47,4 @@ class UserInterface:
 
     #Display 'Thank you!'
     def thank_you(self):
-        messagebox.showinfo("Thank you for using the program", "Thank you!")
+        messagebox.showinfo("(:SLAYYYYY:)", "Thank you!")
