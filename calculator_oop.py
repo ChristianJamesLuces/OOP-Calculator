@@ -17,7 +17,7 @@ while True:
         result = calcu.calculate_result(number1, number2, operation) 
         ui.display_result(result) #Display the result
     except ZeroDivisionError as e:
-        ui.display_result("Error", str(e)) #Show the error
+        ui.display_result(str(e)) #Show the error
 
     if not ui.ask_try_again():
         ui.thank_you() #Display the 'Thank you!'
