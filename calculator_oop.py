@@ -6,6 +6,8 @@ ui = UserInterface()
 calcu = Calculator()
 
 ui.intro()
-ui.operations()
-ui.get_numbers()
+operation = ui.operations()
+number1, number2 = ui.get_numbers()
+result = calcu.calculate_result(number1, number2, operation)
+ui.display_result(result)
 #Create an instance and run it

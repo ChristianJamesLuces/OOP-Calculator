@@ -1,6 +1,8 @@
 
 import pyfiglet
 import time
+
+
 #Define User interface class
 class UserInterface:
     #Display the welcome message and its function
@@ -29,6 +31,10 @@ class UserInterface:
         except ValueError:
             print("\033[100m" + "Invalid Input: Please enter a number" + "\033[0m")
 
-#Display the result
+    #Display the result
+    def display_result(self, result):
+        print("-" * 20)
+        print("\033[91;1m" + "Result: ", result, "\033[0m")
+        print("\033[4m" + "-Operation executed-\n" + "\033[0m" )
 #Ask if they want to retry it
 #Display 'Thank you!'
