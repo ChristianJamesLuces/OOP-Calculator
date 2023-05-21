@@ -47,4 +47,10 @@ class UserInterface:
                 return False
             else:
                 print("\033[100m" + "Invalid input: Please enter only 'yes or no'." + "\033[0m")
-#Display 'Thank you!'
+
+    #Display 'Thank you!'
+    def thank_you(self):
+        gratitude = "\033[102;1m" + "Thank you!" + "\033[0m"
+        print("\n" + ":" * 50)
+        print(gratitude.center(60))
+        print(":" * 50)

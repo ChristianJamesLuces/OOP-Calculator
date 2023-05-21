@@ -11,4 +11,5 @@ number1, number2 = ui.get_numbers()
 result = calcu.calculate_result(number1, number2, operation)
 ui.display_result(result)
 ui.ask_try_again()
+ui.thank_you()
 #Create an instance and run it
