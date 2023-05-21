@@ -1,62 +1,50 @@
 
-import tkinter 
-import time
-
+import tkinter as tk
+from tkinter import simpledialog, messagebox
 
 #Define User interface class
 class UserInterface:
     #Display the welcome message and its function
     def intro(self):
-        intro = ("WELCOME")
-        print("WELCOME")
-        print("This program is a simple app calculator that will ask the user to a math operation and perform it.")
-        input("Press the ENTER key to run the program....")
-        time.sleep(2)
+        root = tk.Tk()
+        root.withdraw()
+        messagebox.showinfo("Welcome", "Welcome to the Simple Calculator App!")
 
     #Display the operations
     def operations(self):
-        print("\n Addition = + \n Subtraction = - \n Multiplication = * \n Division = /\n")
-        #Ask the user the operation
-        operation = [input("Choose one symbol to perform the math operation: ")]
-        return operation
+        root = tk.Tk()
+        root.withdraw()
+        valid_operators = ['+', '-', '/', '*']
+        while True:
+            operation = simpledialog.askstring("Choose Operation", "Choose one symbol to perform the math operation (+, -, *, /): ")
+            if operation in valid_operators:
+                return operation
+            elif operation is None:
+                return None
+            else:
+                messagebox.showerror("Invalid Operator", "Please choose a valid operator.")
+
     
     #Ask the user for the numbers
     def get_numbers(self):
+        root = tk.Tk()
+        root.withdraw()
         while True:
             try:
-                number1 = float(input("Input your first number: "))
-                number2 =  float(input("Input your second number: "))
-                print("\033[30m" + "Calculating....." + "\033[0m")
-                time.sleep(1)
+                number1 = simpledialog.askfloat("Input Number", "Input your first number: ")
+                number2 = simpledialog.askfloat("Input Number", "Input your second number: ")
                 return number1, number2
             except ValueError:
-                print("Invalid Input: Please enter a number")
+                messagebox.showerror("Invalid Input", "Please enter a number")
 
     #Display the result
     def display_result(self, result):
-        print("-" * 20)
-        print("Result: ", result)
-        print("-Operation executed-\n")
-
-    #Error handling
-    def handling_error(self, error):
-        print("Error: ", error)
-        print("-Operation Failed-\n")
-    
+        messagebox.showinfo("Result", "Result: " + str(result))
     #Ask if they want to retry it
     def ask_try_again(self):
-        while True:
-            try_again = str(input("Do you want to try again? (yes/no): ")).lower()
-            if try_again == "yes":
-                return True
-            elif try_again == "no":
-                return False
-            else:
-                print("Invalid input: Please enter only 'yes or no'.")
+        response = messagebox.askyesno("Try Again", "Do you want to try again?")
+        return response
 
     #Display 'Thank you!'
     def thank_you(self):
-        gratitude = "\033[102;1m" + "Thank you!" + "\033[0m"
-        print("\n" + ":" * 50)
-        print(gratitude.center(60))
-        print(":" * 50)
+        messagebox.showinfo("Thank you for using the program", "Thank you!")
