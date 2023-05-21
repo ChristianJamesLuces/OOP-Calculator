@@ -1,19 +1,14 @@
-
-import tkinter as tk
+#Importing the necessary modules
 from tkinter import simpledialog, messagebox
 
 #Define User interface class
 class UserInterface:
     #Display the welcome message and its function
     def intro(self):
-        root = tk.Tk()
-        root.withdraw()
         messagebox.showinfo("Welcome", "Welcome to the Simple Calculator App!")
 
     #Display the operations
     def operations(self):
-        root = tk.Tk()
-        root.withdraw()
         valid_operators = ['+', '-', '/', '*']
         while True:
             operation = simpledialog.askstring("Choose Operation", "Choose one symbol to perform the math operation (+, -, *, /): ")
@@ -27,8 +22,6 @@ class UserInterface:
     
     #Ask the user for the numbers
     def get_numbers(self):
-        root = tk.Tk()
-        root.withdraw()
         while True:
             try:
                 number1 = simpledialog.askfloat("Input Number", "Input your first number: ")

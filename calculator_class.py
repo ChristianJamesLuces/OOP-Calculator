@@ -1,7 +1,4 @@
 #Define the Calculator class
-import tkinter as tk
-from tkinter import simpledialog, messagebox
-
 class Calculator:
     #Define the Operators
     def __init__(self):
@@ -24,7 +21,7 @@ class Calculator:
         if number2 != 0:
             return number1 / number2
         else:
-            messagebox.showerror ("ZeroDivisionError", "Invalid Input: Cannot be divide by zero.")
+            raise ZeroDivisionError ("Invalid Input: Cannot be divide by zero.")
         
     #Calculate the result
     def calculate_result(self, number1, number2, operation):
@@ -37,4 +34,4 @@ class Calculator:
         elif operation == '/':
             return self.divide(number1, number2)
         else:
-            messagebox.showerror("ValueError", "Invalid Operation: Unrecognized operator")
+            raise ValueError("Invalid Operation: Unrecognized operator")
