@@ -3,3 +3,4 @@
 #Define the Subtraction
 #GDefine the Multiplication
 #Define the Divition
+#Calculate for the result
