@@ -2,7 +2,7 @@
 class Calculator:
     #Define the Operators
     def __init__(self):
-        self.operators = ['+', '-', '/', '*']
+        self.operations = ['+', '-', '/', '*']
 
     #Define the Addition
     def add(self, number1, number2):
@@ -24,12 +24,12 @@ class Calculator:
             raise ValueError("Invalid Input: Cannot be divide by zero.")
         
     #Calculate the result
-    def calculate_result(self, number1, number2, operator):
-        if operator == '+':
+    def calculate_result(self, number1, number2, operations):
+        if operations == '+':
             return self.add(number1, number2)
-        elif operator == '-':
+        elif operations == '-':
             return self.subtract(number1, number2)
-        elif operator == '*':
+        elif operations == '*':
             return self.multiply(number1, number2)
-        elif operator == '/':
+        elif operations == '/':
             return self.divide(number1, number2)

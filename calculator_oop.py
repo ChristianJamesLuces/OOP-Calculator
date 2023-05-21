@@ -6,4 +6,5 @@ ui = UserInterface()
 calcu = Calculator()
 
 ui.intro()
+ui.operations()
 #Create an instance and run it
