@@ -36,5 +36,15 @@ class UserInterface:
         print("-" * 20)
         print("\033[91;1m" + "Result: ", result, "\033[0m")
         print("\033[4m" + "-Operation executed-\n" + "\033[0m" )
-#Ask if they want to retry it
+
+    #Ask if they want to retry it
+    def ask_try_again(self):
+        while True:
+            try_again = str(input("\033[95m" + "Do you want to try again? (yes/no): " + "\033[0m")).lower
+            if try_again == "yes":
+                return True
+            elif try_again == "no":
+                return False
+            else:
+                print("\033[100m" + "Invalid input: Please enter only 'yes or no'." + "\033[0m")
 #Display 'Thank you!'
