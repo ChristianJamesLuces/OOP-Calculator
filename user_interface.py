@@ -7,6 +7,7 @@ import time
 class UserInterface:
     #Display the welcome message and its function
     def intro(self):
+        intro = ("WELCOME")
         print("WELCOME")
         print("This program is a simple app calculator that will ask the user to a math operation and perform it.")
         input("Press the ENTER key to run the program....")
@@ -37,6 +38,11 @@ class UserInterface:
         print("Result: ", result)
         print("-Operation executed-\n")
 
+    #Error handling
+    def handling_error(self, error):
+        print("Error: ", error)
+        print("-Operation Failed-\n")
+    
     #Ask if they want to retry it
     def ask_try_again(self):
         while True:

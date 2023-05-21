@@ -21,7 +21,7 @@ class Calculator:
         if number2 != 0:
             return number1 / number2
         else:
-            raise ValueError("Invalid Input: Cannot be divide by zero.")
+            raise ZeroDivisionError("Invalid Input: Cannot be divide by zero.")
         
     #Calculate the result
     def calculate_result(self, number1, number2, operation):
