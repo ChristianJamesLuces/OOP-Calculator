@@ -14,11 +14,21 @@ class UserInterface:
     #Display the operations
     def operations(self):
         print("\033[93;1m" + "\n Addition = + \n Subtraction = - \n Multiplication = * \n Division = /\n" + "\033[0m")
+        #Ask the user the operation
         operation = input("\033[92;1m" + "Choose one symbol to perform the math operation: " + "\033[0m")
         return operation
-#Ask the user the operation
-#Ask the user the first number
-#Ask the user the second number
+    
+    #Ask the user for the numbers
+    def get_numbers(self):
+        try:
+            number1 = float(input("\033[36m" + "Input your first number: " + "\033[36m"))
+            number2 =  float(input("\033[36m" + "Input your second number: " + "\033[36m"))
+            print("\033[30m" + "Calculating....." + "\033[0m")
+            time.sleep(1)
+            return number1, number2
+        except ValueError:
+            print("\033[100m" + "Invalid Input: Please enter a number" + "\033[0m")
+
 #Display the result
 #Ask if they want to retry it
 #Display 'Thank you!'

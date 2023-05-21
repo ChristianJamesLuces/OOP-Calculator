@@ -7,4 +7,5 @@ calcu = Calculator()
 
 ui.intro()
 ui.operations()
+ui.get_numbers()
 #Create an instance and run it
