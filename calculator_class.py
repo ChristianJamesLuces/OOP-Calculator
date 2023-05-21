@@ -1,7 +1,7 @@
 #Define the Calculator class
 class Calculator:
     #Define the Operators
-    def __init___(self):
+    def __init__(self):
         self.operators = ['+', '-', '/', '*']
 
     #Define the Addition
@@ -17,9 +17,19 @@ class Calculator:
         return number1 * number2
     
     #Define the Division
-    def devide(self, number1, number2):
+    def divide(self, number1, number2):
         if number2 != 0:
             return number1 / number2
         else:
             raise ValueError("Invalid Input: Cannot be divide by zero.")
-#Calculate for the result
+        
+    #Calculate the result
+    def calculate_result(self, number1, number2, operator):
+        if operator == '+':
+            return self.add(number1, number2)
+        elif operator == '-':
+            return self.subtract(number1, number2)
+        elif operator == '*':
+            return self.multiply(number1, number2)
+        elif operator == '/':
+            return self.divide(number1, number2)
