@@ -12,6 +12,8 @@ class Calculator:
     def subtract(self, number1, number2):
         return number1 - number2
     
-#GDefine the Multiplication
+    #Define the Multiplication
+    def multiply(self, number1, number2):
+        return number1 * number2
 #Define the Divition
 #Calculate for the result
