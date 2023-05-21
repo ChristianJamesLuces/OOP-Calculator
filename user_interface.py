@@ -1,5 +1,5 @@
 
-import pyfiglet
+import tkinter 
 import time
 
 
@@ -7,47 +7,46 @@ import time
 class UserInterface:
     #Display the welcome message and its function
     def intro(self):
-        intro = pyfiglet.figlet_format("WELCOME".center(39, "="), font = "digital")
-        print(intro)
-        print("\033[44;1m" + "This program is a simple app calculator that will ask the user to a math operation and perform it." + "\033[0m")
+        print("WELCOME")
+        print("This program is a simple app calculator that will ask the user to a math operation and perform it.")
         input("Press the ENTER key to run the program....")
         time.sleep(2)
 
     #Display the operations
     def operations(self):
-        print("\033[93;1m" + "\n Addition = + \n Subtraction = - \n Multiplication = * \n Division = /\n" + "\033[0m")
+        print("\n Addition = + \n Subtraction = - \n Multiplication = * \n Division = /\n")
         #Ask the user the operation
-        operation = [input("\033[92;1m" + "Choose one symbol to perform the math operation: " + "\033[0m")]
+        operation = [input("Choose one symbol to perform the math operation: ")]
         return operation
     
     #Ask the user for the numbers
     def get_numbers(self):
         while True:
             try:
-                number1 = float(input("\033[36m" + "Input your first number: " + "\033[36m"))
-                number2 =  float(input("\033[36m" + "Input your second number: " + "\033[36m"))
+                number1 = float(input("Input your first number: "))
+                number2 =  float(input("Input your second number: "))
                 print("\033[30m" + "Calculating....." + "\033[0m")
                 time.sleep(1)
                 return number1, number2
             except ValueError:
-                print("\033[100m" + "Invalid Input: Please enter a number" + "\033[0m")
+                print("Invalid Input: Please enter a number")
 
     #Display the result
     def display_result(self, result):
         print("-" * 20)
-        print("\033[91;1m" + "Result: ", result, "\033[0m")
-        print("\033[4m" + "-Operation executed-\n" + "\033[0m" )
+        print("Result: ", result)
+        print("-Operation executed-\n")
 
     #Ask if they want to retry it
     def ask_try_again(self):
         while True:
-            try_again = str(input("\033[95m" + "Do you want to try again? (yes/no): " + "\033[0m")).lower()
+            try_again = str(input("Do you want to try again? (yes/no): ")).lower()
             if try_again == "yes":
                 return True
             elif try_again == "no":
                 return False
             else:
-                print("\033[100m" + "Invalid input: Please enter only 'yes or no'." + "\033[0m")
+                print("Invalid input: Please enter only 'yes or no'.")
 
     #Display 'Thank you!'
     def thank_you(self):
