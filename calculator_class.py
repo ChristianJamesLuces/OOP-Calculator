@@ -1,8 +1,9 @@
+
 #Define the Calculator class
 class Calculator:
     #Define the Operators
     def __init__(self):
-        self.operations = ['+', '-', '/', '*']
+        self.operations = ['+', '-', '/', '*', '**']
 
     #Define the Addition
     def add(self, number1, number2):
