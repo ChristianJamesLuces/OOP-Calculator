@@ -9,7 +9,7 @@ class UserInterface:
 
     #Display the operations
     def operations(self):
-        valid_operators = ['+', '-', '/', '*']
+        valid_operators = ['+', '-', '/', '*', "**"]
         while True:
             operation = simpledialog.askstring("Choose Operation", "Choose one symbol to perform the math operation (+, -, *, /): ")
             if operation in valid_operators:
