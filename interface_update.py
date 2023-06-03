@@ -12,7 +12,7 @@ class InterfaceUpdate(UserInterface):
         font = ("Arial", 18, "bold")
 
         text_color = "white"
-        label = tk.Label(window, text="Thank you!", font=font, fg=text_color, bg = "black")
+        label = tk.Label(window, text=">>>>>>>>>>>>>\nThank you!\n>>>>>>>>>>>>>", font=font, fg=text_color, bg = "black")
         label.pack()
 
         window.geometry("200x100")
