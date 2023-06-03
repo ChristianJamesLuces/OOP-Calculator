@@ -11,7 +11,7 @@ class UserInterface:
     def operations(self):
         valid_operators = ['+', '-', '/', '*', "**"]
         while True:
-            operation = simpledialog.askstring("Choose Operation", "Choose one symbol to perform the math operation (+, -, *, /): ")
+            operation = simpledialog.askstring("Choose Operation", "Choose one symbol to perform the math operation (+, -, *, /, **): ")
             if operation in valid_operators:
                 return operation
             elif operation is None:
