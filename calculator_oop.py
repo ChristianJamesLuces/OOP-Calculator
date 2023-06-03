@@ -1,9 +1,9 @@
 #Import the module and files
-from user_interface import UserInterface
+from interface_update import InterfaceUpdate
 from calculator_class import Calculator
 
 #Creating the instances
-ui = UserInterface()
+ui = InterfaceUpdate()
 calcu = Calculator()
 
 ui.intro() #Display the intro
